@@ -33,7 +33,7 @@ const Logout = () => {
             if (response.ok) {
                 console.log("Logout successful");
             } else {
-                console.error("Logout failed", await response.json());
+                console.error("Logout failed");
             }
         } catch (error) {
             console.error("Error logging out:", error);
