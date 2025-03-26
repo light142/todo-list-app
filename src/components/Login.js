@@ -30,7 +30,7 @@ const Login = () => {
       setErrorMessages([]);
       localStorage.setItem("token", response.data.token);
       setIsAuthenticated(true);
-      navigate("/dashboard"); // Redirect after login
+      navigate("/todos"); // Redirect after login
     } catch (error) {
       if (error.response && error.response.data) {
         const errors = error.response.data;
