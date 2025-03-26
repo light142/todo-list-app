@@ -1,0 +1,11 @@
+{
+    "routes": [
+        {
+            "src": "/manifest.json",
+            "dest": "/manifest.json",
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+            }
+        }
+    ]
+}

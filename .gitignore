@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+
+# React build
+/build/
+dist/
+.eslintcache
+/.cache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# npm package-lock and yarn lock files
+package-lock.json
+yarn.lock
+
+# Coverage folder for testing
+coverage/
+
+# dotenv files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
