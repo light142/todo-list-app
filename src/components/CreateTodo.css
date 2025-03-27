@@ -61,6 +61,7 @@
   }
   
   button[type="submit"] {
+    margin-top: 50px;
     width: 100%;
     padding: 12px;
     border: none;
@@ -86,5 +87,28 @@
     color: red;
     font-size: 1rem;
     margin-bottom: 10px;
+  }
+  
+  .navigate-button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navigate-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .navigate-button:active {
+    transform: scale(0.95);
   }
   

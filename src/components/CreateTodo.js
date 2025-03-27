@@ -40,6 +40,10 @@ const CreateTodo = () => {
         }
     };
 
+    const handleBack = (e) => {
+        navigate('/todos');
+    }
+
     return (
         <div className="create-todo-container">
             <h1>Create Todo</h1>
@@ -84,6 +88,9 @@ const CreateTodo = () => {
 
                 <button type="submit" disabled={loading}>
                     {loading ? 'Creating...' : 'Create Todo'}
+                </button>
+                <button onClick={handleBack} className="navigate-button">
+                    Back to List
                 </button>
             </form>
         </div>
