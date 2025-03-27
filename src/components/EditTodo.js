@@ -15,7 +15,7 @@ const EditTodo = () => {
 
     useEffect(() => {
         fetchTodo();
-    }, []);
+    });
 
     const fetchTodo = async () => {
         setLoading(true);

@@ -24,7 +24,7 @@ function RegisterPage() {
     e.preventDefault();
     setLoading(true); // Show spinner while processing request
     try {
-      const response = await axios.post(API_URLS.REGISTER, formData);
+      await axios.post(API_URLS.REGISTER, formData);
       setSuccessMessage("Registration successful! Please login.");
       setFormData({ username: "", password: "" });
       setErrorMessages([]);

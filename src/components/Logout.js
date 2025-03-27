@@ -48,7 +48,7 @@ const Logout = () => {
     // Perform the logout operation when the component mounts
     useEffect(() => {
         logout(); // Perform the logout
-    }, []);
+    });
 
     return (
         <div className="logout-container">
