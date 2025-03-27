@@ -16,7 +16,6 @@ const EditTodo = () => {
     const fetchTodo = useCallback(async () => {
         setLoading(true);
         try {
-            console.log(`${API_URLS.TODOS}${id}`);
             const token = localStorage.getItem("token");
             const response = await axios.get(`${API_URLS.TODOS}${id}`, {
                 headers: {
