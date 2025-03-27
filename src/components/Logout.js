@@ -15,7 +15,6 @@ const Logout = () => {
             const token = localStorage.getItem("token"); // Get token from storage
 
             if (!token) {
-                console.error("No token found");
                 return;
             }
 
@@ -29,12 +28,6 @@ const Logout = () => {
                     },
                 }
             );
-
-            if (response.ok) {
-                console.log("Logout successful");
-            } else {
-                console.error("Logout failed");
-            }
         } catch (error) {
             console.error("Error logging out:", error);
         } finally {

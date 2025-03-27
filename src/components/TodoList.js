@@ -28,13 +28,15 @@ const TodoList = () => {
                     },
                 }
             );
-            const fetchedTodos = response.data.map((item) => ({
-                id: item.id,
-                title: item.title,
-                description: item.description,
-                status: item.status,
-            }));
-            setTodos(fetchedTodos);
+            if (response?.data) {
+                const fetchedTodos = response.data.map((item) => ({
+                    id: item.id,
+                    title: item.title,
+                    description: item.description,
+                    status: item.status,
+                }));
+                setTodos(fetchedTodos);
+            }
         } catch (error) {
             console.error("Error fetching todos", error);
         }

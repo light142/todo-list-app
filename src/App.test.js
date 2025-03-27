@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router";
 import { AuthProvider } from './context/AuthContext'; // Correct path to AuthContext
 import App from "./App";
 import axios from "axios";
-import { act } from "react";
+import { act } from '@testing-library/react'
 
 // Mock Axios
 jest.mock("axios");

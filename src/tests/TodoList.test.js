@@ -1,5 +1,5 @@
 import React from "react";
-import { act } from "react"; // ✅ Import act from React
+import { act } from '@testing-library/react'
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import axios from "axios";

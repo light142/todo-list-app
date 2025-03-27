@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^18.0.0",
+    "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.4.0",
     "react-router-dom": "^7.4.0",
@@ -51,7 +51,7 @@
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.8.4",
     "axios-mock-adapter": "^2.1.0",
