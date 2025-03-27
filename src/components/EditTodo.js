@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams, useNavigate } from "react-router";
 import axios from "axios";
 import { API_URLS } from "../config";
@@ -13,11 +13,7 @@ const EditTodo = () => {
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
 
-    useEffect(() => {
-        fetchTodo();
-    });
-
-    const fetchTodo = async () => {
+    const fetchTodo = useCallback(async () => {
         setLoading(true);
         try {
             console.log(`${API_URLS.TODOS}${id}`);
@@ -37,7 +33,11 @@ const EditTodo = () => {
             console.error("Error fetching todo", error);
         }
         setLoading(false);
-    };
+    }, [id]);
+
+    useEffect(() => {
+        fetchTodo();
+    }, [fetchTodo]);
 
     const handleChange = (e) => {
         setTodo({ ...todo, [e.target.name]: e.target.value });
