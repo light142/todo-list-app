@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router";
 import { useAuth } from "../context/AuthContext"; // Use the AuthContext to check authentication status
 
 const PrivateRoute = ({ element: Element }) => {

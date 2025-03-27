@@ -1,6 +1,6 @@
 // Logout.tsx
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { useAuth } from '../context/AuthContext';
 import { API_URLS } from "../config"; // Import the base URL from config file
 import { useEffect } from "react";
