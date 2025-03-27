@@ -18,7 +18,7 @@ const Logout = () => {
                 return;
             }
 
-            const response = await axios.post(
+            await axios.post(
                 API_URLS.LOGOUT,
                 {},
                 {
