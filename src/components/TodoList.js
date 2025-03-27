@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { API_URLS } from "../config"; // Import the base URL from config file
-import { Link, useNavigate  } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router';
 import Spinner from "../components/Spinner"; // Import Spinner component
 import "./TodoList.css";
 
@@ -49,7 +49,7 @@ const TodoList = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem("token"); // Get token from storage
-            await axios.delete(`${API_URLS.TODOS}${id}/`, 
+            await axios.delete(`${API_URLS.TODOS}${id}/`,
                 {
                     headers: {
                         "Content-Type": "application/json",

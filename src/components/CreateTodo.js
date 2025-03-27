@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import { useNavigate } from 'react-router-dom'; // Use 'useNavigate' from react-router-dom v6
+import { useNavigate } from 'react-router'; // Use 'useNavigate' from react-router-dom v6
 import { API_URLS } from "../config"; // Import the base URL from config file
 import './CreateTodo.css'; // Import custom styles for CreateTodo
 
