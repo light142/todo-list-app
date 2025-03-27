@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Logout from './components/Logout'; // Import Logout component
 import TodoList from './components/TodoList';
 import CreateTodo from './components/CreateTodo';
+import EditTodo from './components/EditTodo';
 import PrivateRoute from './components/PrivateRoute';
 import Header from './components/Header'; // Import Header component
 import './App.css'; // Importing styles
@@ -24,6 +25,7 @@ function App() {
             <Route path="/logout" element={<Logout />} />
             <Route path="/todos" element={<PrivateRoute element={TodoList} />} />
             <Route path="/create-todo" element={<PrivateRoute element={CreateTodo} />} />
+            <Route path="/edit-todo/:id" element={<PrivateRoute element={EditTodo} />} />
           </Routes>
         </div>
       </Router>

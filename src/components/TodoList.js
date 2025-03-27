@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { API_URLS } from "../config"; // Import the base URL from config file
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import Spinner from "../components/Spinner"; // Import Spinner component
 import "./TodoList.css";
 
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchTodos();
@@ -41,7 +42,7 @@ const TodoList = () => {
     };
 
     const handleEdit = (id) => {
-        console.log("edit todo ");
+        navigate(`/edit-todo/${id}`);
     };
 
     const handleDelete = (id) => {
