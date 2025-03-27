@@ -45,8 +45,23 @@ const TodoList = () => {
         navigate(`/edit-todo/${id}`);
     };
 
-    const handleDelete = (id) => {
-        console.log("delete todo ");
+    const handleDelete = async (id) => {
+        setLoading(true);
+        try {
+            const token = localStorage.getItem("token"); // Get token from storage
+            await axios.delete(`${API_URLS.TODOS}${id}/`, 
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Token ${token}`, // Attach token in the Authorization header
+                    },
+                }
+            );
+            await fetchTodos();
+        } catch (error) {
+            console.error("Error deleting todo", error);
+        }
+        setLoading(false);
     };
 
     if (loading) return <div className='loading'><Spinner /></div>
